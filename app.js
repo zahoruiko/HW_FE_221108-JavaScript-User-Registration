@@ -3,7 +3,7 @@ let _html = {};
 
 // Форма для регистрации
 _html.signUp =
-  "<h1>Sign up</h1>" +
+  '<h1>Sign up</h1>' +
   '<div id="message"></div>' +
   '<form><div class="form-group">' +
   '<label for="username">Username:</label>' +
