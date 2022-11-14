@@ -58,16 +58,6 @@ _html.userData =
 
 // Форма для страницы выхода из системы  
 _html.signOut = "<h2>You are logged out</h2><hr>";
-  '<h1>Log in</h1>' +
-  '<div id="message"></div>' +
-  '<form><div class="form-group">' +
-  '<label for="username">Username:</label>' +
-  '<input type="text" class="form-control" id="username" placeholder="Username" />' +
-  '</div>' +
-  '<div class="form-group">' +
-  '<label for="exampleInputPassword1">Password:</label>' +
-  '<input type="password" class="form-control" id="password1" placeholder="Password" />' +
-  '</div>' +
   '<br /><button id="singUpButton" type="button" class="btn btn-outline-primary">Sign up</button> ' +
   'or <button id="signInButton" type="button" class="btn btn-primary">Log in</button></form>';
 
@@ -96,7 +86,6 @@ function showSignUpForm() {
     .addEventListener("click", function () {
       console.log("Switch to login form");
       showSignInForm();
-      // signIn();
     });
 }
 
@@ -105,16 +94,16 @@ function showSignInForm() {
   console.log("Called: showSignInForm()");
   _appendWrapper(_html.signIn);
   document
-    .getElementById("singUpButton")
-    .addEventListener("click", function () {
-      signUp();
-    });
-  document
     .getElementById("signInButton")
     .addEventListener("click", function () {
-      showSignInForm();
-      // signIn();
+       signIn();
     });
+  document
+    .getElementById("singUpButton")
+    .addEventListener("click", function () {
+      showSignUpForm();
+    });
+  
 }
 
 // Форма для отображения данных пользователя и определяем обработку нажатия на кнопки
@@ -130,7 +119,6 @@ function showUserDataForm() {
     .getElementById("signOutButton")
     .addEventListener("click", function () {
       showSignOutForm();
-      // signOut();
     });
 }
 
@@ -141,13 +129,12 @@ function showSignOutForm() {
   document
     .getElementById("singUpButton")
     .addEventListener("click", function () {
-      signUp();
+      showSignUpForm();
     });
   document
     .getElementById("signInButton")
     .addEventListener("click", function () {
       showSignInForm();
-      // signIn();
     });
 }
 
