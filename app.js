@@ -100,8 +100,7 @@ function showSignInForm() {
     .getElementById("singUpButton")
     .addEventListener("click", function () {
       showSignUpForm();
-    });
-  
+    }); 
 }
 
 // Форма для отображения данных пользователя и определяем обработку нажатия на кнопки
