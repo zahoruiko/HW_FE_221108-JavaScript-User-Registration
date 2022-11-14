@@ -1,0 +1,25 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+#wrapper {
+  width: 400px;
+  padding: 50px;
+  border: 1px solid #555;
+}
+#message {
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#error-message {
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: red;
+}
