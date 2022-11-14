@@ -1,7 +1,5 @@
 console.log("JS-script is started.");
 let _html = {};
-let _requests = {};
-let _AUTH = "";
 
 // Форма для регистрации
 _html.signUp =
@@ -96,7 +94,7 @@ function showSignInForm() {
   document
     .getElementById("signInButton")
     .addEventListener("click", function () {
-       signIn();
+      signIn();
     });
   document
     .getElementById("singUpButton")
