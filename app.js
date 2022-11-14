@@ -10,64 +10,64 @@ _html.signUp =
   '<form><div class="form-group">' +
   '<label for="username">Username:</label>' +
   '<input type="text" class="form-control" id="username" />' +
-  "</div>" +
+  '</div>' +
   '<div class="form-group">' +
   '<label for="exampleInputPassword1">Password:</label>' +
   '<input type="password" class="form-control" id="password1" />' +
-  "</div>" +
+  '</div>' +
   '<div class="form-group">' +
-  '<label for="exampleInputPassword1">Password confirmation:</label>' +
+  '<label for="exampleInputPassword2">Password confirmation:</label>' +
   '<input type="password" class="form-control" id="password2" />' +
-  "</div>" +
+  '</div>' +
   '<br /><button id="signInButton" type="button" class="btn btn-outline-primary">Log in</button> ' +
   'or <button id="singUpButton" type="button" class="btn btn-primary">Sign up</button></form>';
 
 // Форма для входа
 _html.signIn =
-  "<h1>Log in</h1>" +
+  '<h1>Log in</h1>' +
   '<span id="message"></span>' +
   '<form><div class="form-group">' +
   '<label for="username">Username:</label>' +
   '<input type="text" class="form-control" id="username" />' +
-  "</div>" +
+  '</div>' +
   '<div class="form-group">' +
   '<label for="password">Password:</label>' +
   '<input type="password" class="form-control" id="password" />' +
-  "</div>" +
+  '</div>' +
   '<br /><button id="singUpButton" type="button" class="btn btn-outline-primary">Sign up</button> ' +
   'or <button id="signInButton" type="button" class="btn btn-primary">Log in</button></form>';
 
 // форма для отображения данных пользователя
 _html.userData =
-  "<h1>User account</h1>" +
+  '<h1>User account</h1>' +
   '<div id="message"></div>' +
   '<form><div class="form-group">' +
   '<label for="username">Username:</label>' +
   '<input type="text" class="form-control" id="username" />' +
-  "</div>" +
+  '</div>' +
   '<div class="form-group">' +
   '<label for="age">Age:</label>' +
   '<input type="text" class="form-control" id="age" />' +
-  "</div>" +
+  '</div>' +
   '<div class="form-group">' +
   '<label for="avatar">Avatar URL:</label>' +
   '<input type="text" class="form-control" id="avatar" />' +
-  "</div>" +
+  '</div>' +
   '<br /><button id="signOutButton" type="button" class="btn btn-outline-primary">Log out</button> ' +
   'or <button id="updateButton" type="button" class="btn btn-primary">Update</button></form>';
 
 // Форма для страницы выхода из системы  
 _html.signOut = "<h2>You are logged out</h2><hr>";
-"<h1>Log in</h1>" +
+  '<h1>Log in</h1>' +
   '<div id="message"></div>' +
   '<form><div class="form-group">' +
   '<label for="username">Username:</label>' +
   '<input type="text" class="form-control" id="username" placeholder="Username" />' +
-  "</div>" +
+  '</div>' +
   '<div class="form-group">' +
   '<label for="exampleInputPassword1">Password:</label>' +
   '<input type="password" class="form-control" id="password1" placeholder="Password" />' +
-  "</div>" +
+  '</div>' +
   '<br /><button id="singUpButton" type="button" class="btn btn-outline-primary">Sign up</button> ' +
   'or <button id="signInButton" type="button" class="btn btn-primary">Log in</button></form>';
 
@@ -94,7 +94,9 @@ function showSignUpForm() {
   document
     .getElementById("signInButton")
     .addEventListener("click", function () {
-      signIn();
+      console.log("Switch to login form");
+      showSignInForm();
+      // signIn();
     });
 }
 
@@ -110,7 +112,8 @@ function showSignInForm() {
   document
     .getElementById("signInButton")
     .addEventListener("click", function () {
-      signIn();
+      showSignInForm();
+      // signIn();
     });
 }
 
@@ -126,7 +129,8 @@ function showUserDataForm() {
   document
     .getElementById("signOutButton")
     .addEventListener("click", function () {
-      signOut();
+      showSignOutForm();
+      // signOut();
     });
 }
 
@@ -142,7 +146,8 @@ function showSignOutForm() {
   document
     .getElementById("signInButton")
     .addEventListener("click", function () {
-      signIn();
+      showSignInForm();
+      // signIn();
     });
 }
 
